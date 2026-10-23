@@ -158,7 +158,7 @@ public class ConsoleMenu {
         String name = readLine(scanner, "Введите имя читателя, которого хотите зарегистрировать: ");
         Reader reader = new Reader(name);
         library.registerReader(reader);
-        System.out.println("Читатель " + name + " зарегистрирован! ");
+        System.out.println("Читатель " + name + " с номером " + reader.getId() + " зарегистрирован! ");
     }
 
 
