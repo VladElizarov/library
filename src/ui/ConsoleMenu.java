@@ -47,6 +47,7 @@ public class ConsoleMenu {
                     case 12 -> showAvailableItems();
                     case 13 -> partlySearch();
                     case 14 -> showStatistics();
+                    case 15 -> deleteReader();
                     default -> throw new IllegalStateException("Такого пункта не существует: " + choice);
                 }
             } catch (LibraryException | IllegalStateException | IllegalArgumentException e) {
@@ -230,6 +231,12 @@ public class ConsoleMenu {
         }
     }
 
+    private void deleteReader() {
+        int id = readInt(scanner, "Введите id читателя, которого хотите удалить: ");
+        library.deleteReaderById(id);
+        System.out.println("Читатель удален. ");
+    }
+
 
 
     private void showReadersItems() {
@@ -266,6 +273,7 @@ public class ConsoleMenu {
                 "12 - показать свободные\n" +
                 "13 - поиск по части названия\n" +
                 "14 - вывести статистику\n" +
+                "15 - удалить читателя\n" +
                 "0 - Выход");
     }
 }

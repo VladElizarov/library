@@ -2,6 +2,7 @@ package service;
 
 import exceptions.ItemNotFoundException;
 import exceptions.LimitExceededException;
+import exceptions.ReaderHasItemsException;
 import exceptions.ReaderNotFoundException;
 import model.LibraryItem;
 import model.Reader;
@@ -135,4 +136,12 @@ public class Library {
 
     }
 
+    public void deleteReaderById(int id) {
+        Reader reader = findReaderById(id);
+        if (!reader.getItems().isEmpty()) {
+            throw new ReaderHasItemsException("Нельзя удалить читателя "
+                    + reader.getName() + ": на руках " + reader.getItems().size() + " издания");
+        }
+        readers.remove(id, reader);
+    }
 }
