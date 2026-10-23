@@ -1,4 +1,4 @@
-package Test;
+package testdata;
 
 import model.Book;
 import model.Magazine;
