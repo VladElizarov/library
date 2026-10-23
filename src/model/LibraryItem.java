@@ -17,7 +17,7 @@ public abstract class LibraryItem {
 
     public LibraryItem(int id, String name) {
         if (name == null || name.isBlank()) {
-            throw new IllegalArgumentException("Имя не может быть пустым.");
+            throw new IllegalArgumentException("Название не может быть пустым.");
         }
         this.id = id;
         this.name = name;
