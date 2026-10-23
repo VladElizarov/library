@@ -258,7 +258,7 @@ public class ConsoleMenu {
 
 
     private void showMenu() {
-        System.out.println("===== БИБЛИОТЕКА =====\n" +
+        System.out.println("===== ГОРОДСКАЯ БИБЛИОТЕКА =====\n" +
                 "1 - Показать все издания\n" +
                 "2 - Добавить книгу\n" +
                 "3 - Добавить журнал\n" +
