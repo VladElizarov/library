@@ -62,6 +62,9 @@ public class Reader {
         }
     }
 
+    public String getName() {
+        return name;
+    }
 
     public List<LibraryItem> getItems() {
         return List.copyOf(borrowedItems);
